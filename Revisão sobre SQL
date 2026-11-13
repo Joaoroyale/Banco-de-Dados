@@ -1,0 +1,30 @@
+CREATE DATABASE ifpe;
+
+create table Aluno (
+matricula Int primary key,
+nome VARCHAR(20),
+cpf CHAR (11),
+sexo CHAR(1),
+turma varchar(2)
+);
+
+select * from aluno;
+
+alter table aluno
+add column turma varchar(2);
+
+drop table aluno;
+
+insert into aluno  (matricula, nome, cpf, sexo, turma) values
+(123455, 'vitor', '0987654321', 'M', 'B1'),
+(098756, 'brena', '49816719461', 'F', 'B2'),
+(865697, 'antonio', '1234567910', 'M', 'B2'),
+(789465, 'joao', '4732246783', 'M', 'B1'),
+(124624, 'pedro', '12345631234', 'M', 'B2');
+
+
+UPDATE aluno
+set nome = 'brena', sexo = 'f'
+where matricula = 098756;
+
+delete from aluno where matricula = 865697;
